@@ -48,9 +48,9 @@ export default class ImagePickerComponent extends React.Component {
     render() {
         return (
             <View style={styles.GalleryView}>
-                <TouchableOpacity onPress={this._pickImage}>
+                <TouchableOpacity onPress={this._pickImage} style={styles.GalleryButton}>
                     <Image
-                        source={require("../../../static/gallery.png")}
+                        source={require("../../../static/power.png")}
                         style={styles.GalleryImage}
                     />
                 </TouchableOpacity>

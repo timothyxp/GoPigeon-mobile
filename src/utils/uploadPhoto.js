@@ -9,7 +9,7 @@ formatData = (photo) => {
     });
 
     return data;
-}
+};
 
 export default uploadPhoto = photo => {
     return fetch(

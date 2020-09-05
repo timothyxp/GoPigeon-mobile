@@ -32,11 +32,6 @@ export default class CameraComponent extends React.Component {
             return (
                 <View style={{ flex: 1 }}>
                     <Camera style={{ flex: 1 }} type={type} ref={ref => this.props.setCamera(ref)}>
-                        <View>
-                            <Text>
-                                {this.state.text}
-                            </Text>
-                        </View>
                         <View
                             style={{
                                 flex: 1,

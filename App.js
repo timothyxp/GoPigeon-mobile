@@ -8,18 +8,18 @@ import InfoPage from "./src/pages/infoPage/InfoPage";
 
 const AppNavigator = createStackNavigator({
   Chooser: {
-    screen: PhotoPage
+    screen: PhotoPage,
   },
   Shower: {
     screen: InfoPage
   }
-},{
-  initialRouteName: "Chooser",
-  defaultNavigationOptions: {
-    headerStyle: {
-      display: "none"
-    },
-  }
+},
+{
+  headerMode: 'none',
+  navigationOptions: {
+    headerVisible: false,
+  },
+  initialRouteName: "Chooser"
 });
 
 let AppContainer = createAppContainer(AppNavigator);
