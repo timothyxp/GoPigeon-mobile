@@ -31,18 +31,8 @@ export default class ImagePickerComponent extends React.Component {
         });
 
         if (!result.cancelled) {
-            this.setState({ image: result.uri });
+            this.props.processPhoto(result);
         }
-
-        uploadPhoto(result)
-            .then(
-                response => {
-                    console.log(response);
-                    this.props.navigation.navigate("Shower", {
-                        music: response
-                    });
-                }
-            );
     };
 
     render() {
