@@ -86,7 +86,9 @@ export default class PhotoPage extends React.Component {
     this.setState({
       photo_uri: undefined,
       response: undefined,
-      error: false
+      error: false,
+      fullDescription: false,
+      error_count: this.state.error_count >= 3 ? 0 : this.state.error_count
     });
   };
 
@@ -137,6 +139,9 @@ export default class PhotoPage extends React.Component {
                       </View>
                     </View>
                     <View style={styles.GrayLine}/>
+                    <TouchableOpacity style={styles.SmallInfoExitButton} onPress={this.resetPhoto}>
+                      <Image source={require('../../../static/X.png')}/>
+                    </TouchableOpacity>
                     <ScrollView>
                     <View style={styles.SubMenu}>
                       <TouchableOpacity
